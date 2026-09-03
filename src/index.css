@@ -1,0 +1,140 @@
+
+@import "tailwindcss";
+ 
+
+@theme {
+  --color-coal: #0e1013;
+  --color-graphite: #16191e;
+  --color-slate2: #1e222a;
+  --color-bone: #e9e4d8;
+  --color-bone-dim: #b8b3a7;
+  --color-ash: #8f959d;
+  --color-brass: #c8a468;
+  --color-brass-soft: #a8884f;
+  --color-line: rgba(233, 228, 216, 0.14);
+
+  --font-display: "Cormorant Garamond", "Georgia", serif;
+  --font-body: "Archivo", "Helvetica Neue", sans-serif;
+
+  --ease-lux: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+  background-color: var(--color-coal);
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-coal);
+  color: var(--color-bone);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-brass);
+  color: var(--color-coal);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-coal);
+}
+::-webkit-scrollbar-thumb {
+  background: #2c313a;
+  border: 3px solid var(--color-coal);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brass-soft);
+}
+
+/* ---- Chữ viền rỗng kiểu bản vẽ kiến trúc ---- */
+.text-outline {
+  -webkit-text-stroke: 1px rgba(233, 228, 216, 0.38);
+  color: transparent;
+}
+
+/* ---- Lớp nhiễu hạt (film grain) phủ toàn trang ---- */
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: -50%;
+  z-index: 80;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grainShift 1.4s steps(4) infinite;
+}
+@keyframes grainShift {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-2%, 3%); }
+  50% { transform: translate(3%, -2%); }
+  75% { transform: translate(-3%, -3%); }
+  100% { transform: translate(0, 0); }
+}
+
+/* ---- Chạy chữ marquee ---- */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 36s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* ---- Gạch chân quét ngang cho link ---- */
+.link-sweep {
+  position: relative;
+}
+.link-sweep::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 1px;
+  width: 100%;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s var(--ease-lux);
+}
+.link-sweep:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* ---- Placeholder mờ (blur-up) cho ảnh đang tải ---- */
+.img-placeholder {
+  background:
+    linear-gradient(115deg, #171a20 0%, #21252d 45%, #171a20 90%);
+  background-size: 220% 100%;
+  animation: shimmer 2.4s ease-in-out infinite;
+}
+@keyframes shimmer {
+  0% { background-position: 110% 0; }
+  100% { background-position: -110% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grain::after,
+  .marquee-track {
+    animation: none;
+  }
+}
