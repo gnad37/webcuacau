@@ -93,11 +93,12 @@ export default function ProjectModal({
           {/* Nội dung chính — key theo id để chạy transition khi chuyển dự án */}
           <motion.div
             key={project.id}
+            data-lenis-prevent="true" // Thêm dòng này: Cấm thư viện cuộn can thiệp vào modal
             initial={{ opacity: 0, y: 34 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.55, ease: EASE }}
-            className="grid flex-1 overflow-y-auto lg:grid-cols-[1.35fr_1fr]"
+            className="grid flex-1 min-h-0 overflow-y-auto overscroll-y-contain lg:grid-cols-[1.35fr_1fr]"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Ảnh 4K */}
