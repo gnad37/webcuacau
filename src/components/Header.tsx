@@ -13,20 +13,16 @@ const NAV = [
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
-/** Logo nét vẽ mái nhà — vẽ tay bằng SVG để giữ đúng tinh thần bản vẽ. */
 function Logo() {
   return (
     <span className="flex items-center gap-3">
-      <svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden>
-        <path
-          d="M5 27 L16 6 L27 27 M10.5 20.5 H21.5"
-          stroke="currentColor"
-          strokeWidth="1.6"
-        />
-        <circle cx="16" cy="6" r="1.4" fill="var(--color-brass)" />
-      </svg>
-      <span className="font-display text-xl tracking-[0.22em] text-bone">
-        BIM Design
+      <img 
+        src="/logo.png" 
+        alt="BIM Design Logo" 
+        className="h-12 w-auto object-contain"
+      />
+      <span className="font-display text-xl font-light tracking-[0.3em] text-bone uppercase mt-1">
+        Design
       </span>
     </span>
   );

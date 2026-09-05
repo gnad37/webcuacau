@@ -69,12 +69,14 @@ export default function Footer() {
         <div className="grid gap-10 py-14 md:grid-cols-4">
           <div>
             <div className="flex items-center gap-3 text-bone">
-              <svg width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden>
-                <path d="M5 27 L16 6 L27 27 M10.5 20.5 H21.5" stroke="currentColor" strokeWidth="1.6" />
-                <circle cx="16" cy="6" r="1.4" fill="var(--color-brass)" />
-              </svg>
-              <span className="font-display text-lg tracking-[0.2em]">BIM Design</span>
-            </div>
+              <img 
+                  src="/logo.png" 
+                  alt="BIM Design Logo" 
+                  className="h-12 w-auto object-contain"
+                />
+              <span className="font-display text-xl font-light tracking-[0.3em] text-bone uppercase mt-1">
+        Design
+      </span>            </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed font-light text-ash">
               Studio kiến trúc nhà ở cao cấp — nơi bản vẽ được đối xử như một
               tác phẩm, và ngôi nhà được dựng nên như một lời hứa.
