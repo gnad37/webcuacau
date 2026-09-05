@@ -26,7 +26,7 @@ function Logo() {
         <circle cx="16" cy="6" r="1.4" fill="var(--color-brass)" />
       </svg>
       <span className="font-display text-xl tracking-[0.22em] text-bone">
-        ATELIER&nbsp;VÕ
+        BIM Design
       </span>
     </span>
   );

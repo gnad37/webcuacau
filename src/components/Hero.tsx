@@ -54,9 +54,11 @@ export default function Hero() {
       : document.getElementById("cong-trinh")?.scrollIntoView({ behavior: "smooth" });
 
   return (
-    <section ref={ref} className="relative flex h-svh min-h-[640px] flex-col overflow-hidden">
-      {/* ===== Ảnh Hero 4K — LCP nên dùng priority (eager + fetchpriority high) ===== */}
-      <motion.div className="absolute inset-0" style={{ y }}>
+<section ref={ref} className="relative flex min-h-svh flex-col overflow-hidden">      {/* ===== Ảnh Hero 4K — LCP nên dùng priority (eager + fetchpriority high) ===== */}
+      <motion.div
+  className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-1 flex-col justify-end px-5 pb-10 pt-32 md:px-10"
+  style={{ y: contentY }}
+>
         <SmartImage
           src={HERO_IMAGE}
           alt="Biệt thự hiện đại bên hồ bơi lúc hoàng hôn — công trình tiêu biểu của Atelier Võ"
