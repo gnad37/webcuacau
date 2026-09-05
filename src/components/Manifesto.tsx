@@ -33,7 +33,7 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
 const STATS: { value: number; suffix?: string; label: string }[] = [
   { value: 68, label: "Công trình bàn giao" },
   { value: 15, label: "Năm hành nghề" },
-  { value: 12, label: "Giải thưởng kiến trúc" },
+  { value: 100, suffix: "%", label: "Bản vẽ được bàn giao đúng thời hạn" },
   { value: 98, suffix: "%", label: "Khách hàng giới thiệu" },
 ];
 
@@ -45,7 +45,6 @@ export default function Manifesto() {
         aria-hidden
         className="font-display text-outline pointer-events-none absolute -top-8 right-0 text-[26vw] leading-none opacity-40 select-none"
       >
-        VÕ
       </span>
 
       <div className="relative mx-auto grid max-w-[1440px] gap-14 px-5 py-24 md:grid-cols-12 md:px-10 md:py-36">

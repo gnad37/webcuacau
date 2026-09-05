@@ -42,11 +42,11 @@ export default function Footer() {
           </Reveal>
           <Reveal delay={0.2}>
             <a
-              href="mailto:hello@ateliervo.vn"
+              href="0"
               className="group mt-12 inline-flex items-center gap-4"
             >
               <span className="link-sweep text-lg font-light tracking-wide text-bone-dim transition-colors duration-500 group-hover:text-brass md:text-2xl">
-                omg#fffff
+                BIM Design
               </span>
               <svg
                 width="22"
@@ -73,7 +73,7 @@ export default function Footer() {
                 <path d="M5 27 L16 6 L27 27 M10.5 20.5 H21.5" stroke="currentColor" strokeWidth="1.6" />
                 <circle cx="16" cy="6" r="1.4" fill="var(--color-brass)" />
               </svg>
-              <span className="font-display text-lg tracking-[0.2em]">ATELIER VÕ</span>
+              <span className="font-display text-lg tracking-[0.2em]">BIM Design</span>
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed font-light text-ash">
               Studio kiến trúc nhà ở cao cấp — nơi bản vẽ được đối xử như một
@@ -85,17 +85,15 @@ export default function Footer() {
             {
               head: "Văn phòng",
               items: [
-                "12 Nguyễn Văn Thủ, Sài Gòn",
-                "8A Phố Huế, Hà Nội",
-                "44 Bạch Đằng, Đà Nẵng",
+                "Nguyễn Huệ, Xuân Yên, Hà Tĩnh",
               ],
               links: false,
             },
             {
               head: "Liên hệ",
               items: [
-                { label: "+84 28 3910 2009", href: "tel:+842839102009" },
-                { label: "hello@ateliervo.vn", href: "dsfsegseg" },
+                { label: "+84 0", href: "tel:0" },
+                { label: "0", href: "0" },
                 { label: "Thứ 2 – Thứ 6, 9:00 – 18:00" },
               ],
               links: true,
@@ -141,7 +139,7 @@ export default function Footer() {
         {/* Đáy footer */}
         <div className="flex flex-wrap items-center justify-between gap-4 border-t border-line pt-7">
           <p className="text-[10px] tracking-[0.22em] text-ash uppercase">
-            © 2009–2026 haha. Bảo lưu mọi quyền.
+            © 2009–2026 BIM Design. Bảo lưu mọi quyền.
           </p>
           <button
             onClick={toTop}

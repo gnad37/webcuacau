@@ -78,7 +78,7 @@ export default function Gallery() {
           </div>
           <Reveal delay={0.15}>
             <p className="max-w-sm text-sm leading-relaxed font-light text-ash">
-              Chín công trình tiêu biểu trong số 68 dự án đã bàn giao — mỗi ngôi
+              Tám công trình tiêu biểu trong số 68 dự án đã bàn giao — mỗi ngôi
               nhà một cá tính, một khí hậu, một câu chuyện gia đình.
             </p>
           </Reveal>

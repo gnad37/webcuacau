@@ -55,9 +55,8 @@ export default function Featured() {
             <Reveal delay={0.22}>
               <div className="mt-10 flex divide-x divide-line border-y border-line">
                 {[
-                  ["1.600 m", "Cao độ đỉnh núi"],
                   ["9 m", "Sàn vươn không cột"],
-                  ["360 m²", "Diện tích sàn"],
+                  ["350 m²", "Diện tích sàn"],
                 ].map(([v, k]) => (
                   <div key={k} className="flex-1 px-4 py-5 first:pl-0 last:pr-0">
                     <p className="font-display text-2xl text-bone md:text-3xl">{v}</p>

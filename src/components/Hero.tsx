@@ -155,7 +155,7 @@ export default function Hero() {
           {[
             ["Toạ độ", "10.8231° B — 106.6297° Đ"],
             ["Công trình", "68 dự án đã bàn giao"],
-            ["Giải thưởng", "12 danh hiệu quốc tế"],
+            ["Kinh Nghiệm", "15 năm thâm niên trong nghề"],
           ].map(([k, v]) => (
             <div key={k} className="flex shrink-0 items-baseline gap-3 whitespace-nowrap">
               <span className="text-[10px] font-semibold tracking-[0.3em] text-brass uppercase">{k}</span>
