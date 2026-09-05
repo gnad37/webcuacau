@@ -52,8 +52,8 @@ export default function SmartImage({
         fetchpriority={priority ? "high" : "auto"}
         onLoad={() => setLoaded(true)}
         className={cn(
-          "h-full w-full object-cover transition-[opacity,transform,filter] duration-[1200ms] ease-out will-change-transform",
-          loaded ? "opacity-100 blur-0 scale-100" : "opacity-0 blur-2xl scale-105",
+          "h-full w-full object-cover transition-opacity duration-[800ms] ease-out",
+          loaded ? "opacity-100" : "opacity-0",
           imgClassName
         )}
         draggable={false}

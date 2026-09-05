@@ -1,9 +1,8 @@
-
-export type Category = "modern" | "classic" | "minimalist";
+export type Category = "nha1" | "nha2" | "nha3";
 
 export interface Project {
   id: string;
-  index: string; // số thứ tự kiểu bản vẽ: 01, 02...
+  index: string; 
   name: string;
   category: Category;
   location: string;
@@ -11,7 +10,7 @@ export interface Project {
   area: string;
   architect: string;
   status: string;
-  /** Ảnh 4K gốc — SmartImage sẽ lo lazy-load + blur-up */
+  /** Ảnh chất lượng cao — SmartImage sẽ lo lazy-load + blur-up */
   src: string;
   ratio: "portrait" | "landscape";
   tagline: string;
@@ -19,166 +18,155 @@ export interface Project {
 }
 
 export const CATEGORY_LABEL: Record<Category, string> = {
-  modern: "Hiện đại",
-  classic: "Cổ điển",
-  minimalist: "Tối giản",
+  nha1: "Biệt thự Lô góc", // Dành cho a4, a5
+  nha2: "Biệt thự Đồi",   // Dành cho a6, a7
+  nha3: "Villa Mặt tiền", // Dành cho a2, a3, a8, a9
 };
 
-const img = (id: string) =>
-  `https://image.qwenlm.ai/generated-images/${id}/_result.png`;
-
-export const PROJECTS: Project[] = [
-  {
-    id: "doi-thong",
-    index: "01",
-    name: "Biệt thự Đồi Thông",
-    category: "modern",
-    location: "Đà Lạt, Lâm Đồng",
-    year: "2024",
-    area: "420 m²",
-    architect: "KTS. Võ Trọng Nghĩa",
-    status: "Đã hoàn thành",
-    src: img("e33f8b59-2d46-4454-9eed-d7cb46e243a0"),
-    ratio: "portrait",
-    tagline: "Ngôi nhà lơ lửng giữa rừng sương",
-    description:
-      "Đặt trên sườn đồi thông ở cao độ 1.500 m, công trình là ba khối bê tông giật cấp bám theo địa hình, mỗi khối xoay một góc khác nhau để mở trọn tầm nhìn ra thung lũng sương. Hệ kính cao sát trần xoá mờ ranh giới trong – ngoài, để ánh đèn vàng mỗi hoàng hôn trở thành một phần của rừng.",
-  },
-  {
-    id: "vuon-gio",
-    index: "02",
-    name: "Nhà Vườn Gió",
-    category: "minimalist",
-    location: "Hội An, Quảng Nam",
-    year: "2023",
-    area: "180 m²",
-    architect: "KTS. Trần Minh Châu",
-    status: "Đã hoàn thành",
-    src: img("728e4cc8-7e72-49b4-b17d-7d79f6445797"),
-    ratio: "portrait",
-    tagline: "Ít hơn, để gió ở lại nhiều hơn",
-    description:
-      "Một sân trong duy nhất trở thành trái tim của ngôi nhà: sỏi trắng cào vân, một gốc tùng thế, và những bức tường vôi phẳng lặng thu bóng nắng. Toàn bộ không gian sống quây quanh khoảng trống ấy — nơi gió Lào được lọc mềm trước khi tràn vào phòng khách.",
-  },
-  {
-    id: "song-han",
-    index: "03",
-    name: "Dinh thự Sông Hàn",
-    category: "classic",
-    location: "Đà Nẵng",
-    year: "2022",
-    area: "650 m²",
-    architect: "KTS. Lê Vĩnh Phúc",
-    status: "Đã hoàn thành",
-    src: img("5e1a2c2d-db75-4449-b82a-4854a4c80b31"),
-    ratio: "landscape",
-    tagline: "Tỷ lệ vàng bên bờ sông",
-    description:
-      "Mặt tiền đá vôi đối xứng tuyệt đối với hàng cột thức Ionic, ban công sắt rèn thủ công và sân tiền trải sỏi rửa. Chúng tôi phục dựng tinh thần dinh thự Pháp đầu thế kỷ, nhưng giấu bên trong nó một hệ nhà thông minh và sàn nâng chống ngập hiện đại.",
-  },
-  {
-    id: "casa-anh-sang",
-    index: "04",
-    name: "Casa Ánh Sáng",
-    category: "modern",
-    location: "Hà Nội",
-    year: "2024",
-    area: "310 m²",
-    architect: "KTS. Võ Trọng Nghĩa",
-    status: "Đã hoàn thành",
-    src: img("ffc6e75c-1f07-40a8-9c3e-18ddb25c5d4f"),
-    ratio: "portrait",
-    tagline: "Bê tông biết kể chuyện bằng bóng đổ",
-    description:
-      "Giữa khu phố chật, ngôi nhà ống được cắt rỗng theo phương đứng: năm giếng trời lệch tầng rót những cột nắng di chuyển suốt ngày dài. Tường bê tông vân gỗ mộc giữ nguyên dấu ván khuôn, cầu thang thép bản mỏng như nét vẽ lơ lửng trong khoảng thông tầng.",
-  },
-  {
-    id: "tinh-vien",
-    index: "05",
-    name: "Tĩnh Viện",
-    category: "minimalist",
-    location: "Huế",
-    year: "2023",
-    area: "240 m²",
-    architect: "KTS. Trần Minh Châu",
-    status: "Đã hoàn thành",
-    src: img("f1c3a3f7-1f07-4fee-ad38-c14a0e499d07"),
-    ratio: "landscape",
-    tagline: "Một vòng trăng soi mặt nước",
-    description:
-      "Viên gạch men trăng khuyết — 'nguyệt môn' — đứng giữa hồ tĩnh, soi bóng thành một vầng trăng trọn vẹn. Pavilion thiền bằng gỗ xám và đá Thanh đặt nép dưới tán cây sứ cổ, nơi gia chủ ngồi nghe mưa Huế rơi trên mái đồng hun.",
-  },
-  {
-    id: "nguyet-que",
-    index: "06",
-    name: "Lâu đài Nguyệt Quế",
-    category: "classic",
-    location: "Quận 2, TP. Hồ Chí Minh",
-    year: "2021",
-    area: "780 m²",
-    architect: "KTS. Lê Vĩnh Phúc",
-    status: "Đã hoàn thành",
-    src: img("f2f1607a-52c2-48d6-8940-7717539e7045"),
-    ratio: "portrait",
-    tagline: "Đại sảnh của những vòm ánh sáng",
-    description:
-      "Thông tầng kép với cầu thang đá cẩm thạch xoắn uốn quanh giếng trời hình elip, lan can sắt dát đồng do thợ Huế chạm tay trong 14 tháng. Sàn gỗ sồi ghép xương cá và đèn chùm pha lê Bohemia hoàn tất bản giao hưởng tân cổ điển.",
-  },
-  {
-    id: "tren-may",
-    index: "07",
-    name: "Nhà Trên Mây",
-    category: "modern",
-    location: "Sa Pa, Lào Cai",
-    year: "2025",
-    area: "360 m²",
-    architect: "KTS. Võ Trọng Nghĩa",
-    status: "Đang thi công",
-    src: img("1517a998-590b-4491-8a7c-2656314da046"),
-    ratio: "landscape",
-    tagline: "Sống ở ranh giới của biển mây",
-    description:
-      "Khối đá bazan địa phương và kính nhô ra khỏi mép núi, sàn phòng khách treo trên ruộng bậc thang 9 m. Mỗi bình minh, mây tràn qua thung lũng và ngôi nhà trở thành một con tàu giữa đại dương trắng — trải nghiệm mà chúng tôi gọi là 'neo đậu trên trời'.",
-  },
-  {
-    id: "hang-duong",
-    index: "08",
-    name: "Biệt thự Hàng Dương",
-    category: "classic",
-    location: "Vũng Tàu",
-    year: "2022",
-    area: "520 m²",
-    architect: "KTS. Lê Vĩnh Phúc",
-    status: "Đã hoàn thành",
-    src: img("c27817c1-662c-4464-9c5c-519c9c725d37"),
-    ratio: "portrait",
-    tagline: "Hành lang vòm và gió biển Đông",
-    description:
-      "Dãy hành lang vòm lặp nhịp như phím đàn ôm lấy mặt tiền hướng biển, mái ngói đất nung và con tiện trắng gợi nhớ kiến trúc nghỉ dưỡng Đông Dương 1930. Hàng dương cổ thụ được giữ nguyên — ngôi nhà được vẽ vòng qua từng gốc cây.",
-  },
-  {
-    id: "khong-gian-trang",
-    index: "09",
-    name: "Không Gian Trắng",
-    category: "minimalist",
-    location: "Cần Thơ",
-    year: "2024",
-    area: "200 m²",
-    architect: "KTS. Trần Minh Châu",
-    status: "Đã hoàn thành",
-    src: img("5dbbf68a-5948-426a-a98e-24be53b45755"),
-    ratio: "landscape",
-    tagline: "Bóng nắng là món nội thất duy nhất",
-    description:
-      "Toàn bộ ngôi nhà chỉ có một màu trắng và một chiếc ghế. Sân trong cong mềm như dải lụa hứng trọn nắng miền Tây — bóng đổ thay đổi hình dạng mỗi giờ, trở thành tác phẩm sắp đặt duy nhất mà gia chủ cần. Một tuyên ngôn về sự đủ.",
-  },
-];
-
-export const HERO_IMAGE = img("3c482d52-15a9-4cd8-823a-dc429a092af7");
-
+// Cấu hình thanh Bộ lọc (Filters)
 export const FILTERS: { value: Category | "all"; label: string }[] = [
-  { value: "all", label: "Tất cả" },
-  { value: "modern", label: "Hiện đại" },
-  { value: "classic", label: "Cổ điển" },
-  { value: "minimalist", label: "Tối giản" },
+  { value: "all", label: "Tất cả dự án" },
+  { value: "nha1", label: "Biệt thự Lô góc" },
+  { value: "nha2", label: "Biệt thự Đồi" },
+  { value: "nha3", label: "Villa Mặt tiền" },
 ];
+ 
+export const PROJECTS: Project[] = [
+  // --- NHÀ 1 (a4) ---
+  {
+    id: "nha1-toan-canh-ngay",
+    index: "01",
+    name: "Biệt thự Lô góc - Toàn cảnh ban ngày",
+    category: "nha1", 
+    location: "Phan Thiết, Bình Thuận",
+    year: "2026",
+    area: "350 m²",
+    architect: "Hoàng Hải Đăng",
+    status: "Đã bàn giao",
+    src: "/a4.webp", 
+    ratio: "landscape", 
+    tagline: "Mái ấm bình yên giữa lòng đô thị",
+    description: "Công trình là một nốt trầm tĩnh lặng giữa khu phố sầm uất, nổi bật với hệ mái Nhật vát dốc thanh lịch và tông màu xám lạnh. Thiết kế lùi sâu giúp tạo ra một khoảng sân trước rộng rãi, kết hợp hệ tường rào đảm bảo sự riêng tư tuyệt đối cho gia chủ."
+  },
+
+  // --- NHÀ 3 (a3 - Ép dọc) ---
+  {
+    id: "nha3-chinh-dien",
+    index: "02",
+    name: "Villa Mặt tiền - Góc nhìn chính diện",
+    category: "nha3", 
+    location: "Phan Thiết, Bình Thuận",
+    year: "2026",
+    area: "320 m²",
+    architect: "Hoàng Hải Đăng",
+    status: "Mới",
+    src: "/a3.webp", 
+    ratio: "portrait",  
+    tagline: "Sự cân bằng hoàn hảo của hình khối",
+    description: "Góc chụp chính diện tôn vinh hệ mái Nhật bề thế và cấu trúc đối xứng của công trình. Các bậc thềm rộng trải dài kết hợp dải đèn LED âm tạo cảm giác chào đón, dẫn dắt ánh nhìn vào không gian nội thất ấm áp bên trong."
+  },
+
+  // --- NHÀ 2 (a6) ---
+  {
+    id: "nha2-tong-quan",
+    index: "03",
+    name: "Biệt thự Đồi - Tổng quan kiến trúc",
+    category: "nha2", 
+    location: "Phan Thiết, Bình Thuận",
+    year: "2026",
+    area: "400 m²",
+    architect: "Hoàng Hải Đăng",
+    status: "Đang thi công",
+    src: "/a6.webp", 
+    ratio: "landscape",
+    tagline: "Sự bề thế vươn mình giữa thiên nhiên",
+    description: "Góc nhìn từ trên cao bao quát toàn bộ khối lượng đồ sộ của công trình. Hệ thống rào chắn được thiết kế đồng bộ với ngôn ngữ kiến trúc của ngôi nhà, kết hợp khoảng sân lát gạch xám rộng rãi tạo nên một tổng thể quy mô và an ninh."
+  },
+
+  // --- NHÀ 3 (a9 - Ép dọc) ---
+  {
+    id: "nha3-chi-tiet",
+    index: "04",
+    name: "Villa Mặt tiền - Chi tiết vật liệu",
+    category: "nha3", 
+    location: "Phan Thiết, Bình Thuận",
+    year: "2026",
+    area: "320 m²",
+    architect: "Hoàng Hải Đăng",
+    status: "Mới",
+    src: "/a9.webp", 
+    ratio: "portrait", 
+    tagline: "Vẻ đẹp từ sự nguyên bản của vật liệu",
+    description: "Góc nhìn cận cảnh tôn vinh các chi tiết cấu tạo cao cấp của mặt tiền. Điểm nhấn chính là mảng tường được ốp đá marble tối màu với những đường vân rạn tự nhiên. Dưới tác động của hệ thống đèn downlight gắn trần, bề mặt đá thô cứng trở nên có chiều sâu và sang trọng hơn."
+  },
+
+  // --- NHÀ 1 (a5) ---
+  {
+    id: "nha1-phoi-canh-dem",
+    index: "05",
+    name: "Biệt thự Lô góc - Phối cảnh đêm",
+    category: "nha1", 
+    location: "Phan Thiết, Bình Thuận",
+    year: "2026",
+    area: "350 m²",
+    architect: "Hoàng Hải Đăng",
+    status: "Đã bàn giao",
+    src: "/a5.webp", 
+    ratio: "landscape", 
+    tagline: "Sự chuyển mình lung linh dưới ánh đèn",
+    description: "Khi màn đêm buông xuống, công trình nổi bật với hệ thống chiếu sáng được tính toán tỉ mỉ. Các vệt sáng hắt lên từ chân tường rào và ánh đèn vàng ấm từ khe hắt mái giúp ngôi nhà giữ được vẻ rực rỡ nhưng không gây chói mắt cho không gian xung quanh."
+  },
+
+  // --- NHÀ 2 (a7) ---
+  {
+    id: "nha2-ve-dem",
+    index: "06",
+    name: "Biệt thự Đồi - Giai điệu Mái Nhật",
+    category: "nha2", 
+    location: "Phan Thiết, Bình Thuận",
+    year: "2026",
+    area: "400 m²",
+    architect: "Hoàng Hải Đăng",
+    status: "Đang thi công",
+    src: "/a7.webp", 
+    ratio: "landscape",
+    tagline: "Chốn lui về bình yên khi màn đêm buông",
+    description: "Khi ráng chiều phai nhạt, công trình thực sự lột xác dưới lớp vỏ bọc ánh sáng nghệ thuật. Hệ thống đèn sân vườn là nét cọ phác họa nên những vệt hắt bóng tinh tế lên thảm thực vật nhiệt đới, hoàn toàn hòa điệu với bóng tối mờ ảo của dải đồi núi điệp trùng phía xa."
+  },
+
+  // --- NHÀ 3 (a2) ---
+  {
+    id: "nha3-goc-nghieng",
+    index: "07",
+    name: "Villa Mặt tiền - Góc nhìn chéo",
+    category: "nha3", 
+    location: "Phan Thiết, Bình Thuận",
+    year: "2026",
+    area: "320 m²",
+    architect: "Hoàng Hải Đăng",
+    status: "Mới",
+    src: "/a2.webp", 
+    ratio: "landscape",
+    tagline: "Nét khỏe khoắn trong từng đường nét",
+    description: "Góc chụp nghiêng phô diễn độ vươn của hệ mái hiên che nắng, đồng thời khoe khéo cách xử lý vật liệu ốp tường. Không gian đệm trước sảnh được mở rộng tối đa, tạo sự giao thoa mượt mà giữa bên trong nhà và khu vực đỗ xe bên ngoài."
+  },
+
+  // --- NHÀ 3 (a8) ---
+  {
+    id: "nha3-canh-quan",
+    index: "08",
+    name: "Villa Mặt tiền - Cảnh quan sảnh trước",
+    category: "nha3", 
+    location: "Phan Thiết, Bình Thuận",
+    year: "2026",
+    area: "320 m²",
+    architect: "Hoàng Hải Đăng",
+    status: "Mới",
+    src: "/a8.webp", 
+    ratio: "landscape",
+    tagline: "Không gian sống hòa quyện cùng thiên nhiên",
+    description: "Những dải bồn hoa thấp được bố trí khéo léo bao quanh chân công trình, kết hợp với các trụ đèn nấm sân vườn tạo ra một lối đi dẫn hướng mềm mại, cân bằng lại sự vuông vức, nam tính của khối nhà chính."
+  },
+];
+ 
+export const HERO_IMAGE = "/a7.webp";
