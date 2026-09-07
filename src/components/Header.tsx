@@ -143,7 +143,7 @@ export default function Header() {
               ))}
             </nav>
             <div className="border-t border-line pt-5 text-[11px] tracking-[0.25em] text-ash uppercase">
-              hello@ateliervo.vn — Sài Gòn · Hà Nội · Đà Nẵng
+              nguyenhuudat.xd33@gmail.com — Sài Gòn · Hà Nội · Đà Nẵng
             </div>
           </motion.div>
         )}

@@ -32,7 +32,7 @@ export default function Featured() {
           <div className="lg:sticky lg:top-32">
             <Reveal variant="fade">
               <p className="mb-6 flex items-center gap-3 text-[11px] font-semibold tracking-[0.34em] text-brass uppercase">
-                <span className="h-px w-10 bg-brass" /> 03 — Tiêu điểm 2025
+                <span className="h-px w-10 bg-brass" />  Tiêu điểm 2025
               </p>
             </Reveal>
             <Reveal>

@@ -53,14 +53,14 @@ export default function Manifesto() {
           <div className="md:sticky md:top-32">
             <Reveal variant="fade">
               <p className="mb-6 flex items-center gap-3 text-[11px] font-semibold tracking-[0.34em] text-brass uppercase">
-                <span className="h-px w-10 bg-brass" /> 02 — Triết lý
+                <span className="h-px w-10 bg-brass" />  Triết lý
               </p>
             </Reveal>
             <Reveal>
               <h2 className="font-display text-5xl leading-[1.04] text-bone sm:text-6xl lg:text-7xl">
                 Ngôi nhà là
                 <br />
-                <span className="text-outline">bản tự truyện</span>
+                 bản tự truyện
                 <br />
                 của gia chủ
               </h2>

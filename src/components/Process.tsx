@@ -37,12 +37,12 @@ export default function Process() {
           <div>
             <Reveal variant="fade">
               <p className="mb-5 flex items-center gap-3 text-[11px] font-semibold tracking-[0.34em] text-brass uppercase">
-                <span className="h-px w-10 bg-brass" /> 04 — Quy trình
+                <span className="h-px w-10 bg-brass" /> Quy trình
               </p>
             </Reveal>
             <Reveal>
               <h2 className="font-display text-5xl leading-[1.02] text-bone sm:text-6xl">
-                Bốn đợt <span className="text-outline">duyệt bản vẽ</span>
+                Bốn đợt duyệt bản vẽ
               </h2>
             </Reveal>
           </div>

@@ -26,7 +26,7 @@ export default function Footer() {
         <div className="border-b border-line pb-16 text-center md:pb-24">
           <Reveal variant="fade">
             <p className="mb-8 flex items-center justify-center gap-3 text-[11px] font-semibold tracking-[0.34em] text-brass uppercase">
-              <span className="h-px w-10 bg-brass" /> 05 — Khởi đầu
+              <span className="h-px w-10 bg-brass" /> Khởi đầu
               <span className="h-px w-10 bg-brass" />
             </p>
           </Reveal>
@@ -36,7 +36,7 @@ export default function Footer() {
             </h2>
           </Reveal>
           <Reveal delay={0.12}>
-            <h2 className="font-display text-outline text-[clamp(3rem,9vw,8.5rem)] leading-[0.98]">
+            <h2 className="font-display text-[clamp(3rem,9vw,8.5rem)] leading-[0.98] text-bone">
               tổ ấm của bạn
             </h2>
           </Reveal>
@@ -94,8 +94,8 @@ export default function Footer() {
             {
               head: "Liên hệ",
               items: [
-                { label: "+84 0", href: "tel:0" },
-                { label: "0", href: "0" },
+                { label: "0399768388", href: "tel:0399768388" },
+                { label: "nguyenhuudat.xd33@gmail.com", href: "nguyenhuudat.xd33@gmail.com" },
                 { label: "Thứ 2 – Thứ 6, 9:00 – 18:00" },
               ],
               links: true,
@@ -104,7 +104,7 @@ export default function Footer() {
               head: "Theo dõi",
               items: [
                 { label: "Instagram", href: "https://instagram.com" },
-                { label: "Pinterest", href: "https://pinterest.com" },
+                { label: "Facebook", href: "https://www.facebook.com/share/1K8pZL8HWY/?mibextid=wwXIfr" },
                 { label: "Behance", href: "https://behance.net" },
               ],
               links: true,
